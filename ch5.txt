@@ -1,0 +1,26 @@
+ALGORITHM read_sentence
+VAR
+    CHAR sentence;
+    INTEGER i:=0;
+    INTEGER nbr_word:=1;
+    INTEGER nbr_characters=0;
+    INTEGER nbr_vowels=0;
+
+
+BEGIN
+Read(sentence);
+ WHILE (sentence[i]<>'.' ) DO
+
+if(sentence[i]==' ')
+{nbr_word:=nbr_word+1 }
+
+if(sentence[i]==(["a, e, i o, u, y"]))
+{nbr_vowels:=nbr_vowels+1;}
+
+i:=i+1;
+nbr_characters:=i;
+    END_WHILE
+    write(nbr_vowels):
+    write(nbr_word);
+    write(nbr_characters);
+END
